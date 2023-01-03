@@ -31,7 +31,7 @@ const Rockets = () => {
       <h1>SpaceX Rockets</h1>
       {loading || !data ? (<p>Loading...</p>) :
         data.rockets.map(rocket => (
-          <RocketCard rocket={rocket}></RocketCard>
+          <RocketCard rocket={rocket as RocketData}></RocketCard>
         ))
       }
       { error && <div>Error</div>}
